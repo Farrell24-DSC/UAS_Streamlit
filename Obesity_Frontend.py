@@ -63,7 +63,7 @@ if submitted:
     }
 
     try:
-        response = requests.post("http://localhost:8000/predict", json=payload)
+        response = requests.post("http://127.0.0.1:8000/predict", json=payload)
         result = response.json()
         if "prediction" in result:
             st.success(f"Prediksi Obesitas: {result['prediction']}")
